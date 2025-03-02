@@ -8,10 +8,14 @@ namespace CarLotSimulator
 {
     internal class Car
     {
-        public Car() { }
+        public Car() 
+        {
+            CarLot._numberOfCars++;
+        }
 
-        public Car(int year, string make, string model, string engineNoise, string honkNoise, bool isDriveable) 
-        { 
+        public Car(int year, string make, string model, string engineNoise, string honkNoise, bool isDriveable)
+        {
+            CarLot._numberOfCars++;
             Year = year;
             Make = make;
             Model = model;
@@ -27,13 +31,13 @@ namespace CarLotSimulator
         public string HonkNoise { get; set; }
         public bool IsDriveable { get; set; }
 
-        public void MakeEngineNoise(string noise) 
+        public void MakeEngineNoise(string noise)
         {
             Console.WriteLine(noise);
         }
 
         public void MakeHonkNoise(string noise)
-        { 
+        {
             Console.WriteLine(noise);
         }
     }
